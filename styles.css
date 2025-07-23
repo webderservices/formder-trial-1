@@ -299,3 +299,12 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+.features, 
+.contact-form,
+.highlight,
+.feature-card,
+.quote-section,
+main,
+section {
+  color: #222 !important;
+}
