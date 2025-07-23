@@ -11,21 +11,12 @@ html {
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: white; /* solid background */
-  color: #222;
+  background: white; /* Changed from gradient to solid */
+  color: #222;       /* Dark text for readability */
   overflow-x: hidden;
   line-height: 1.6;
-  min-height: 100vh;
 }
 
-main {
-  background: white; /* isolate main content */
-  position: relative;
-  z-index: 1;
-  padding-bottom: 4rem;
-}
-
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -114,8 +105,6 @@ ul {
   font-weight: bold;
   border-radius: 25px;
   transition: transform 0.3s ease, background 0.3s ease;
-  cursor: pointer;
-  border: none;
 }
 
 .cta-button:hover {
@@ -283,21 +272,13 @@ ul {
 }
 
 /* ------------------- SCROLL REVEAL ------------------- */
-
-/* Start visible if JS disabled */
 .reveal {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 0;
+  transform: translateY(40px);
   transition: all 0.8s ease-out;
 }
 
-/* Hide initially, show on scroll */
-.js .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.js .reveal.visible {
+.reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
