@@ -11,8 +11,8 @@ html {
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #fc466b, #3f5efb);
-  color: white;
+  background: white; /* Changed from gradient to solid */
+  color: #222;       /* Dark text for readability */
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -27,12 +27,13 @@ ul {
   list-style: none;
 }
 
-/* ------------------- NAVBAR ------------------- */
+/* ------------------- NAVBAR & HEADER ------------------- */
 .header {
   background: linear-gradient(120deg, #3f5efb, #fc466b);
   padding: 2rem;
   color: white;
   position: relative;
+  z-index: 10;
 }
 
 .navbar {
@@ -57,6 +58,7 @@ ul {
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 12px;
+  color: white;
 }
 
 .nav-links a:hover,
@@ -90,6 +92,7 @@ ul {
   transform: translateX(-50%);
   animation: bounce 1.5s infinite;
   opacity: 0.8;
+  color: white;
 }
 
 /* ------------------- CTA BUTTONS ------------------- */
@@ -115,29 +118,31 @@ ul {
   color: white;
 }
 
-/* ------------------- SECTION STYLES ------------------- */
-section {
-  padding: 4rem 2rem;
-}
+/* ------------------- MAIN SECTIONS ------------------- */
 
-.features {
-  background: #fff;
-  color: #333;
+/* Features, Pricing, Contact sections share a similar style */
+
+.features,
+.contact-form,
+.highlight {
+  background: white;
+  color: #222;
+  position: relative;
+  z-index: 5;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  max-width: 1100px;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.features h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #111;
-}
-
+/* Feature Cards */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  margin-top: 2rem;
 }
 
 .feature-card {
@@ -146,15 +151,18 @@ section {
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .feature-card:hover {
   transform: translateY(-10px) scale(1.02);
 }
 
+.feature-card h3 {
+  margin-bottom: 1rem;
+}
+
 .feature-card ul {
-  margin-top: 1rem;
-  text-align: left;
   padding-left: 1.2rem;
 }
 
@@ -162,12 +170,17 @@ section {
   margin-bottom: 0.5rem;
 }
 
-/* ------------------- QUOTES ------------------- */
+/* Quote Section keeps colored gradient background */
+
 .quote-section {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  border-radius: 20px;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .quote-section blockquote {
@@ -180,27 +193,6 @@ section {
   font-weight: 300;
 }
 
-/* ------------------- HIGHLIGHT SECTION ------------------- */
-.highlight {
-  background: #3f5efb;
-  color: white;
-  text-align: center;
-}
-
-.highlight h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* ------------------- FOOTER ------------------- */
-.footer {
-  background: black;
-  color: #ccc;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.95rem;
-}
-
 /* ------------------- CONTACT FORM ------------------- */
 .contact-form {
   max-width: 600px;
@@ -208,10 +200,11 @@ section {
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
-  background: #f9f9f9;
+  background: white;
   border-radius: 20px;
   color: #222;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .contact-form label {
@@ -235,6 +228,17 @@ section {
 .contact-form textarea:focus {
   outline: none;
   box-shadow: 0 0 5px #3f5efb;
+}
+
+/* ------------------- FOOTER ------------------- */
+.footer {
+  background: black;
+  color: #ccc;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 10;
 }
 
 /* ------------------- ANIMATIONS ------------------- */
