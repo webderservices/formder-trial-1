@@ -26,19 +26,30 @@
   <main>
     <section class="features reveal">
       <h2>Contact Form</h2>
-     <form action="https://formspree.io/f/mzzveapd" method="POST">
-  <label for="name">Name</label>
-  <input type="text" name="name" id="name" required />
+      <form class="contact-form" action="https://formspree.io/f/mzzveapd" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
 
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" required />
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
 
-  <label for="message">Message</label>
-  <textarea name="message" id="message" rows="5" required></textarea>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" rows="5" required></textarea>
+        </div>
 
-  <button type="submit" class="cta-button">Send Message</button>
-</form>
+        <!-- Optional: Redirect to thank-you page after submission -->
+        <input type="hidden" name="_redirect" value="https://formder.com/thank-you.html">
+        
+        <!-- Optional: Spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
 
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
     </section>
 
     <section class="quote-section reveal">
