@@ -11,12 +11,29 @@ html {
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: white; /* Changed from gradient to solid */
-  color: #222;       /* Dark text for readability */
+  background: white;
+  color: #222 !important;
   overflow-x: hidden;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
+main {
+  background: white;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 4rem;
+  color: #222 !important;
+}
+
+/* Uncomment for debugging layout */
+/*
+* {
+  outline: 1px solid rgba(255,0,0,0.3) !important;
+}
+*/
+
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -71,6 +88,7 @@ ul {
   text-align: center;
   padding: 4rem 1rem 5rem;
   animation: fadeIn 1.5s ease-in-out;
+  color: white !important;
 }
 
 .hero-title {
@@ -82,7 +100,7 @@ ul {
 .hero-sub {
   font-size: 1.25rem;
   margin-top: 1rem;
-  color: #f1f1f1;
+  color: #f1f1f1 !important;
 }
 
 .scroll-indicator {
@@ -101,32 +119,36 @@ ul {
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
   background: white;
-  color: #3f5efb;
+  color: #3f5efb !important;
   font-weight: bold;
   border-radius: 25px;
   transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .cta-button:hover {
   transform: scale(1.1);
   background: #ffee58;
-  color: #222;
+  color: #222 !important;
 }
 
 .cta-button.alt {
   background: black;
-  color: white;
+  color: white !important;
 }
 
 /* ------------------- MAIN SECTIONS ------------------- */
 
-/* Features, Pricing, Contact sections share a similar style */
-
 .features,
 .contact-form,
-.highlight {
-  background: white;
-  color: #222;
+.highlight,
+.feature-card,
+.quote-section,
+main,
+section {
+  background: white !important;
+  color: #222 !important;
   position: relative;
   z-index: 5;
   border-radius: 20px;
@@ -146,12 +168,13 @@ ul {
 }
 
 .feature-card {
-  background: #f8f8f8;
+  background: #f8f8f8 !important;
   border-radius: 20px;
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   text-align: left;
+  color: #222 !important;
 }
 
 .feature-card:hover {
@@ -173,24 +196,14 @@ ul {
 /* Quote Section keeps colored gradient background */
 
 .quote-section {
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
-  color: white;
+  background: linear-gradient(90deg, #ff8a00, #e52e71) !important;
+  color: white !important;
   padding: 4rem 2rem;
   text-align: center;
   border-radius: 20px;
   margin: 3rem auto;
   max-width: 900px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.quote-section blockquote {
-  font-size: 1.5rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.quote-section cite {
-  font-weight: 300;
 }
 
 /* ------------------- CONTACT FORM ------------------- */
@@ -200,9 +213,9 @@ ul {
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
-  background: white;
+  background: white !important;
   border-radius: 20px;
-  color: #222;
+  color: #222 !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -222,6 +235,7 @@ ul {
   font-size: 1rem;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
+  color: #222 !important;
 }
 
 .contact-form input:focus,
@@ -233,7 +247,7 @@ ul {
 /* ------------------- FOOTER ------------------- */
 .footer {
   background: black;
-  color: #ccc;
+  color: #ccc !important;
   padding: 2rem;
   text-align: center;
   font-size: 0.95rem;
@@ -272,13 +286,22 @@ ul {
 }
 
 /* ------------------- SCROLL REVEAL ------------------- */
+/* Reveal elements visible by default (no opacity 0) */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: all 0.8s ease-out !important;
+  color: #222 !important;
 }
 
-.reveal.visible {
+/* When JS toggles, animate opacity and translate */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -298,19 +321,4 @@ ul {
   .feature-grid {
     grid-template-columns: 1fr;
   }
-}
-.features, 
-.contact-form,
-.highlight,
-.feature-card,
-.quote-section,
-main,
-section {
-  color: #222 !important;
-}
-
-.reveal {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
 }
