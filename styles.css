@@ -308,3 +308,9 @@ main,
 section {
   color: #222 !important;
 }
+
+.reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
