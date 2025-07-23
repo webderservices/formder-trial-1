@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form");
+    form.addEventListener("submit", function (e) {
+      // Let Formspree handle the submission
+      setTimeout(() => {
+        form.reset();
+      }, 100); // Delay so it doesn’t interfere with the redirect
+    });
+  });
+</script>
+
 <body>
   <header class="header">
     <nav class="navbar">
@@ -60,9 +72,20 @@
     </section>
   </main>
 
-  <footer class="footer">
+   <footer class="footer">
     <p>📧 webderservices@gmail.com | 📞 442-359-7553</p>
     <p>© 2025 Formder. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".contact-form");
+      form.addEventListener("submit", function (e) {
+        setTimeout(() => {
+          form.reset();
+        }, 100);
+      });
+    });
+  </script>
 </body>
 </html>
