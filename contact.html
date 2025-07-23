@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formder | Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Formder</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Plans</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero-title">Let's Get You Started</h1>
+      <p class="hero-sub">Tell us what you're looking for. We'll make it happen.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="features reveal">
+      <h2>Contact Form</h2>
+      <form class="contact-form" action="mailto:webderservices@gmail.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </section>
+
+    <section class="quote-section reveal">
+      <blockquote>
+        “Formder took care of everything—we were getting feedback the same day we launched.”
+      </blockquote>
+      <cite>— Small Biz Owner</cite>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>📧 webderservices@gmail.com | 📞 442-359-7553</p>
+    <p>© 2025 Formder. All rights reserved.</p>
+  </footer>
+</body>
+</html>
