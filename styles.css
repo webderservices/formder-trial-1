@@ -398,23 +398,23 @@ section {
 }
 
 .feature-card.best-option {
-  background: linear-gradient(135deg, #eef1ff, #ffffff);
+  background: linear-gradient(135deg, #343d74, #1f1f2e); /* deep purple to dark navy */
   border: 2px solid var(--primary);
-  box-shadow: 0 0 20px rgba(94, 108, 240, 0.25);
+  box-shadow: 0 0 25px rgba(94, 108, 240, 0.4);
   transform: scale(1.015);
   z-index: 1;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: var(--dark); /* ensures readable text on light bg */
+  color: white; /* ensures text is visible */
 }
 
 .feature-card.best-option:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(94, 108, 240, 0.35);
+  box-shadow: 0 0 30px rgba(94, 108, 240, 0.6);
 }
 
 .feature-card.best-option h3 {
-  color: var(--accent); /* match title color like the others */
+  color: #ffffff; /* brighter heading */
 }
 
 .badge {
@@ -430,3 +430,4 @@ section {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
