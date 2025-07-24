@@ -304,6 +304,47 @@ section {
   transform: translateY(0);
 }
 
+/* ------------------- HOW IT WORKS 2x2 GRID ------------------- */
+.how-it-works {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.how-card {
+  background: #f8f8f8;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #222 !important;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.how-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.how-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3f5efb;
+}
+
+.how-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
 /* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 768px) {
   .hero-title {
@@ -317,6 +358,11 @@ section {
   }
 
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack how-it-works cards on small */
+  .how-grid {
     grid-template-columns: 1fr;
   }
 }
