@@ -194,8 +194,9 @@ section {
 
 /* Adjusted card sizing for better horizontal layout */
 .card {
-  flex: 1 1 320px;
-  max-width: 400px;
+  flex: 0 1 30%;
+  max-width: 30%;
+  min-width: 300px;
   min-height: 520px;
   padding: 2rem;
   background: #f0f0fa;
@@ -206,6 +207,7 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
+
 
 .card:hover {
   transform: translateY(-5px);
@@ -497,3 +499,10 @@ section {
     max-width: 100%;
   }
 }
+
+@media (min-width: 1000px) {
+  .service-cards {
+    flex-wrap: nowrap;
+  }
+}
+
