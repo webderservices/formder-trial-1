@@ -159,62 +159,41 @@ section {
   text-align: center;
 }
 
-/* Removed feature-grid & feature-card styles (or leave them if used elsewhere) */
-
-/* ------------------- HOW IT WORKS 2x2 GRID ------------------- */
-.how-it-works {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.how-it-works h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  color: #3f5efb;
-}
-
-.how-grid {
+/* Feature Cards */
+.feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.how-card {
-  background: #f0f4ff;
+.feature-card {
+  background: #f8f8f8 !important;
   border-radius: 20px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 8px 20px rgba(63, 94, 251, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
   color: #222 !important;
 }
 
-.how-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(63, 94, 251, 0.3);
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
 }
 
-.how-card .icon {
-  font-size: 3.5rem;
+.feature-card h3 {
   margin-bottom: 1rem;
 }
 
-.how-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #1a237e;
+.feature-card ul {
+  padding-left: 1.2rem;
 }
 
-.how-card p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: #444;
+.feature-card li {
+  margin-bottom: 0.5rem;
 }
 
-/* ------------------- Quote Section ------------------- */
+/* Quote Section keeps colored gradient background */
 
 .quote-section {
   background: linear-gradient(90deg, #ff8a00, #e52e71) !important;
@@ -325,6 +304,47 @@ section {
   transform: translateY(0);
 }
 
+/* ------------------- HOW IT WORKS 2x2 GRID ------------------- */
+.how-it-works {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.how-card {
+  background: #f8f8f8;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #222 !important;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.how-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.how-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3f5efb;
+}
+
+.how-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
 /* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 768px) {
   .hero-title {
@@ -337,6 +357,11 @@ section {
     margin-top: 1rem;
   }
 
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack how-it-works cards on small */
   .how-grid {
     grid-template-columns: 1fr;
   }
