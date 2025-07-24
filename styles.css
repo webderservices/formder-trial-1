@@ -241,17 +241,18 @@ section {
 }
 
 .card.best-option {
-  background: linear-gradient(135deg, #eef1ff, #ffffff);
-  border: 2px solid var(--primary);
-  box-shadow: 0 0 20px rgba(94, 108, 240, 0.25);
+  background: white;
+  border: 2px solid #3f5efb; /* Matches the start of the header gradient */
+  box-shadow: 0 0 25px rgba(63, 94, 251, 0.25);
   transform: scale(1.015);
   z-index: 1;
 }
 
 .card.best-option:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(94, 108, 240, 0.35);
+  box-shadow: 0 0 30px rgba(63, 94, 251, 0.4);
 }
+
 
 /* Best Value Badge */
 .badge {
