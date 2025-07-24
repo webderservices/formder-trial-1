@@ -133,9 +133,17 @@ ul {
   color: #222 !important;
 }
 
+/* Changed .cta-button.alt styling to look like a proper button */
 .cta-button.alt {
   background: black;
   color: white !important;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+}
+
+.cta-button.alt:hover {
+  background: #222;
 }
 
 /* ------------------- MAIN SECTIONS ------------------- */
@@ -167,13 +175,15 @@ section {
   text-align: center;
 }
 
+/* Increased max-width for wider container to fit 3 cards side by side */
 .services-plans {
   padding: 4rem 1rem;
   background: #ffffff;
   text-align: center;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
+
 .service-cards {
   display: flex;
   flex-wrap: wrap;
@@ -182,10 +192,11 @@ section {
   margin-top: 2rem;
 }
 
+/* Adjusted card sizing for better horizontal layout */
 .card {
-  flex: 1 1 300px;
-  max-width: 350px;
-  min-height: 500px;
+  flex: 1 1 320px;
+  max-width: 400px;
+  min-height: 520px;
   padding: 2rem;
   background: #f0f0fa;
   border-radius: 12px;
@@ -486,4 +497,3 @@ section {
     max-width: 100%;
   }
 }
-
