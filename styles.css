@@ -366,3 +366,30 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Team Section */
+.team {
+  padding: 4rem 2rem;
+  background: #f5f6fb;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 800px;
+  margin: auto;
+}
+
+.team-member {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.team-member h4 {
+  margin-bottom: 0.5rem;
+}
